@@ -1098,3 +1098,5 @@ if (LLVM_INCLUDE_BENCHMARKS)
   add_subdirectory(utils/benchmark)
   add_subdirectory(benchmarks)
 endif()
+
+target_link_options(lld PRIVATE -Wl,-z,stack-size=2097152)
